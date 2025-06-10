@@ -18,10 +18,15 @@ import { doFetch } from '@/composables/doFetch';
             </NavItem>
         </span>
         <span class="nav-item-group flex justify-center align-center">
-            <a v-if="IsLogged" class="p-2 pointer" @click.prevent="logout">
-                <Power />
-            </a>
-            <NavItem :focused="true" v-else linkto="/login">Iniciar sesión</NavItem>
+            <span v-if="IsLogged" class="flex justify-center align-center gap-3">
+                <NavItem :focused="true" linkto="/backoffice">Mis creaciones</NavItem>
+                <a class="p-2 pointer" @click.prevent="logout">
+                    <Power />
+                </a>
+            </span>
+            <span v-else>
+                <NavItem :focused="true" linkto="/login">Iniciar sesión</NavItem>
+            </span>
         </span>
     </nav>
 </template>

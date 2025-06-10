@@ -19,7 +19,7 @@ import { doFetch } from '@/composables/doFetch';
         </span>
         <span class="nav-item-group flex justify-center align-center">
             <span v-if="IsLogged" class="flex justify-center align-center gap-3">
-                <NavItem :focused="true" linkto="/backoffice">Mis creaciones</NavItem>
+                <NavItem :focused="true" linkto="/backoffice/creations">Mis creaciones</NavItem>
                 <a class="p-2 pointer" @click.prevent="logout">
                     <Power />
                 </a>

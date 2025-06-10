@@ -1,5 +1,5 @@
 <script setup>
-    import Wrapper from '@/components/backoffice/Wrapper.vue';
+    import Wrapper from '@/components/generic/Wrapper.vue';
     import Navbar from '@/components/base/Navbar.vue';
     import Container from '@/components/backoffice/Container.vue';
 </script>

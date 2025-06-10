@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\UserFragment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -16,9 +17,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(Request $request): Response
     {
+        $randomFragment = UserFragment::with('user')->first();
+
         return Inertia::render('auth/Login', [
-            'quote' => 'Obtener un fragmento aleatorio de autor',
-            'author' => 'John doe'
+            'quote' => $randomFragment->fragment,
+            'author' => $randomFragment->user->name
         ]);
     }
 

@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(Request $request): Response
     {
-        $randomFragment = UserFragment::with('user')->first();
+        $randomFragment = UserFragment::with('user')->inRandomOrder()->first();
 
         return Inertia::render('auth/Login', [
             'quote' => $randomFragment->fragment,

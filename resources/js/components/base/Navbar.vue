@@ -1,6 +1,6 @@
 <script setup>
     import NavItem from '@/components/base/NavItem.vue';
-import { doFetch } from '@/composables/doFetch';
+    import { doFetch } from '@/composables/doFetch';
     import { Power, BookText } from 'lucide-vue-next';
 
     const logout = async () => {
@@ -39,5 +39,11 @@ import { doFetch } from '@/composables/doFetch';
     }
     .nav-item-group {
         height: 100%;
+    }
+
+    @media (max-width: 700px) {
+        #navbar {
+            height: 20vmin;
+        }
     }
 </style>

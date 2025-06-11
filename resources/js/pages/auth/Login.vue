@@ -16,8 +16,10 @@
 
         IsButtonDisabled.value = true;
         const { code } = await doFetch('/login', 'POST', { email, password }); 
-        IsButtonDisabled.value = false;
-        if(code !== 200) return ErrorMessage.value = 'Credenciales invalidas';
+        if(code !== 200) {
+            IsButtonDisabled.value = false;
+            return ErrorMessage.value = 'Credenciales invalidas';
+        }
 
         location.href = '/backoffice/';
     };

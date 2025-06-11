@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Backoffice\Creations;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Backoffice\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
@@ -10,5 +10,6 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
     Route::get('backoffice', [HomeController::class, 'Create'])
         ->name('backoffice-home');
-    Route::get('backoffice/creations', [Creations::class, 'create']);
+    Route::get('backoffice/creations', [Creations::class, 'create'])
+        ->name('backoffice-creations');
 });

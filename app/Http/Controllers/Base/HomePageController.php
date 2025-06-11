@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Base;
 
+use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 
-class HomeController extends Controller
+class HomePageController extends Controller
 {
     public function Create(): \Inertia\Response {
         return Inertia::render('base/Home');

@@ -6,7 +6,7 @@ import { Cog, NotebookPen } from 'lucide-vue-next';
 
     const links = [
         { Caption: 'Mis creaciones', Icon: NotebookPen, Link: '/backoffice/creations' },
-        { Caption: 'Cuenta y configuración', Icon: Cog, Link: '/backoffice/account' },
+        { Caption: 'Cuenta', Icon: Cog, Link: '/backoffice/account' },
     ];
 </script>
 

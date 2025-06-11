@@ -12,3 +12,11 @@ insert into user_fragments
 (user_id, fragment)
 values
 (1, "— Dos décadas atrapado en tu cuerpo, viendo el mundo a través de tus ojos...");
+
+insert into story_roles
+(static_id, description)
+values
+(0, 'Creador'),
+(1, 'Co-Creador'),
+(2, 'Editor'),
+(3, 'Lector');
